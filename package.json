@@ -17,8 +17,7 @@
   },
   "scripts": {
     "start": "node src/server.js",
-    "test": "./node_modules/.bin/mocha --reporter spec",
-    "heroku-postbuild": "heroku logs --app utcourses"
+    "test": "./node_modules/.bin/mocha --reporter spec"
   },
   "author": "",
   "license": "ISC"
