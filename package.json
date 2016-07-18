@@ -16,7 +16,9 @@
     "mocha": "^2.5.3"
   },
   "scripts": {
-    "test": "./node_modules/.bin/mocha --reporter spec"
+    "start": "node src/server.js",
+    "test": "./node_modules/.bin/mocha --reporter spec",
+    "heroku-postbuild": "heroku logs --app utcourses"
   },
   "author": "",
   "license": "ISC"
