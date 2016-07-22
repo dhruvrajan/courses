@@ -7,7 +7,8 @@ var app = express();
 var port = process.env.PORT || 3000;
 
 // General configuration
-app.use(express.static('public'));
+app.use(express.static(__dirname + '/public'));
+app.set('view engine', 'ejs');
 
 // MongoDB configuration
 // TODO: move db authentication info somewhere else
@@ -21,7 +22,7 @@ app.use(parser.json());
 app.use(parser.urlencoded({extended: true}));
 
 app.get('/', function(req, res) {
-  res.sendFile(path.join(__dirname, '/index.html'));
+  res.render('index');
 });
 
 app.post('/key', function(req, res) {
