@@ -1,15 +1,17 @@
 {
-  "name": "utcourses",
+  "name": "courses",
   "version": "1.0.0",
-  "description": "",
+  "description": "Search engine for all courses provided at [The University of Texas at Austin](https://utexas.edu)",
   "main": "index.js",
   "directories": {
-    "test": "tests"
+    "test": "test"
   },
   "dependencies": {
+    "body-parser": "^1.15.2",
     "chai": "^3.5.0",
     "cheerio": "^0.20.0",
     "mongodb": "^2.1.18",
+    "express": "^4.14.0",
     "requests": "^0.1.7"
   },
   "devDependencies": {
@@ -19,6 +21,14 @@
     "start": "node src/server.js",
     "test": "./node_modules/.bin/mocha --reporter spec"
   },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/utexasdev/courses.git"
+  },
   "author": "",
-  "license": "ISC"
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/utexasdev/courses/issues"
+  },
+  "homepage": "https://github.com/utexasdev/courses#readme"
 }
