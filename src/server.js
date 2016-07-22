@@ -4,7 +4,7 @@ var parser = require('body-parser');
 var mongodb = require('mongodb');
 
 var app = express();
-var port = 3000;
+var port = process.env.PORT || 3000;
 
 // General configuration
 app.use(express.static('public'));
@@ -38,7 +38,7 @@ MongoClient.connect(uri, function(err, _db) {
     db = _db;
     courses = db.collection('courses');
     app.listen(port, function() {
-      console.log('Express server running on 127.0.0.1:' + port);
+      console.log('Node.js server started');
     });
   }
 });
